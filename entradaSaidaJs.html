@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversão de Tipos </title>
+    <style type="text/css">
+    .container{
+        width: 100vw;
+        height: 100vh;
+        /* border: 1px solid blue; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+         border: 1px solid blue;
+         padding: 10px;
+    }
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+
+   <form>
+        <p> Primeiro Dígito: <input type="number" id="digito1"> </p>
+        <p> Segundo Dígito: <input type="number" id="digito2"> </p>
+        <p> 
+            <button type="button" onclick="SalvarDados()"> Calcular </button>
+        </p>
+       <p> Resultado:<input type="text" id="result" readonly> </p>
+        
+    </form> 
+</div>
+
+    <script>
+        function SalvarDados(){
+            let digito1 = document.getElementById("digito1").value;
+            let digito2 = document.getElementById("digito2").value;
+            // let soma = parseInt(digito1) + parseInt(digito2);
+           let soma = parseFloat(digito1) + parseFloat(digito2);
+            console.log(typeof(soma));
+            document.getElementById("result").value = soma;
+            // alert(nome);
+        }
+    </script>
+</body>
+</html>

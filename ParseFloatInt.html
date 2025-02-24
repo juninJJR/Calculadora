@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Comandos de Entrada e Saída no JS</title>
+    <style type="text/css">
+        #divResult{
+            height: 18px;
+            width: 150px;
+            background: cyan;
+            border: 2px solid darkblue;
+            box-shadow: 2px 2px 2px gray;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <p> Digite seu nome: <input type="text" id="nome"> </p>
+        <p> <button type="button" onclick="SalvarDados()"> Salvar e Exibir </button> </p>
+        <p> Resultado:<input type="text" id="result" readonly> </p>
+        Resultado:<div id="divResult"> </div>
+    </form>
+    <script>
+        function SalvarDados(){
+            let nome = document.getElementById("nome").value;
+            document.getElementById("result").value = nome;
+            document.getElementById("divResult").innerHTML = nome;
+            // alert(nome);
+        }
+    //    let nomePessoa = window.prompt("Escreva seu nome");
+    //     console.log(nomePessoa);
+    //     alert(nomePessoa)
+    </script>
+</body>
+</html>

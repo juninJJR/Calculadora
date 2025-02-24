@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculadora </title>
+    <style type="text/css">
+    .container{
+        width: 100vw;
+        height: 100vh;
+        /* border: 1px solid blue; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        text-align: center;
+    }
+    
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+
+   <form>
+        <p> Primeiro Dígito: <input type="number" id="digito1"> </p>
+        <p> Segundo Dígito: <input type="number" id="digito2"> </p>
+        <p> 
+            <button type="button" onclick="somar()"> Soma </button>
+        </p>
+        <p>
+             <button type="button" onclick="dividir()"> Divisão</button>
+        </p>
+        <p>
+             <button type="button" onclick="subtrair()"> Subtrair</button>
+        </p>
+        <p>
+             <button type="button" onclick="multiplicar()"> Multiplicar</button>
+        </p>
+       <p> Resultado:<input type="text" id="result" readonly> </p>
+        
+    </form> 
+</div>
+
+    <script>
+        function somar(){
+            let digito1 = document.getElementById("digito1").value;
+            let digito2 = document.getElementById("digito2").value;
+            // let soma = parseInt(digito1) + parseInt(digito2);
+           let somac = parseFloat(digito1) + parseFloat(digito2);
+
+            console.log(typeof(somac));
+            document.getElementById("result").value = somac;
+        
+            // alert(nome);
+        }
+        function dividir(){
+            let digito1 = document.getElementById("digito1").value;
+            let digito2 = document.getElementById("digito2").value;
+            // let soma = parseInt(digito1) + parseInt(digito2);
+           let divis = parseFloat(digito1) / parseFloat(digito2);
+           console.log(typeof(divis));
+            document.getElementById("result").value = divis;
+        }
+        function subtrair(){
+            let digito1 = document.getElementById("digito1").value;
+            let digito2 = document.getElementById("digito2").value;
+            // let soma = parseInt(digito1) + parseInt(digito2);
+           let subtra = parseFloat(digito1) - parseFloat(digito2);
+           console.log(typeof(subtra));
+            document.getElementById("result").value = subtra;
+        }
+        function multiplicar(){
+            let digito1 = document.getElementById("digito1").value;
+            let digito2 = document.getElementById("digito2").value;
+            // let soma = parseInt(digito1) + parseInt(digito2);
+           let multi = parseFloat(digito1) * parseFloat(digito2);
+           console.log(typeof(multi));
+            document.getElementById("result").value = multi;
+        }
+    </script>
+</body>
+</html>
